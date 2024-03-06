@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CALCULATOR</title>
+    </head>
+    <body>
+        
+    
+        <form>
+            <p>CALCULATOR</p>
+            <label>Num1</label>
+            <input placeholder="num1..." id="num1"/><br>
+            <label>Num2</label>
+            <input placeholder="num2..." id="num2"/><br>
+            <p id="results"></p>
+            <button id="add">+</button>
+            <button id="subtraction" >-</button>
+            <button  id="multiply">*</button>
+            <button id="divide" >/</button>
+            <button id="square">^2</button><br>
+
+
+
+
+            
+        
+         </form>
+
+
+    
+    </body>
+    <script type="text/javascript">
+         let num1 =document.getElementById("num1");
+         let num2 =document.getElementById("num2"); 
+         let results =document.getElementById("results");
+         
+         function add(a,b){
+            return a+b;
+            
+         }
+           function subtraction(c,d){
+            return c-d;
+           }
+            
+           function multiply(e,f){
+            return e*f;
+
+           }
+
+           function divide(g,h){
+            return g/h;
+
+           }
+            
+           function square(i){
+            return i*i;
+
+           }
+
+           let add_button= document.getElementById("add");
+
+           let subtraction_button = document.getElementById("subtraction");
+           
+           let multiply_button= document.getElementById("multiply");
+           
+           let divide_button= document.getElementById("divide");
+           
+           let square_button= document.getElementById("square");
+
+           add_button.onclick = function(e){
+            e.preventDefault();
+            let num1Value = parseFloat(num1.value);
+            let num2Value = parseFloat(num2.value);
+
+            let output = add(num1Value, num2Value);
+            results.innerHTML= output 
+
+           }
+
+           subtraction_button.onclick = function(e){
+            e.preventDefault();
+            let num1Value = parseFloat(num1.value);
+            let num2Value = parseFloat(num2.value);
+
+            let output = subtraction(num1Value,num2Value);
+            results.innerHTML = output
+           }
+
+           multiply_button.onclick = function(e){
+            e.preventDefault();
+            let num1Value = parseFloat(num1.value);
+            let num2Value = parseFloat(num2.value);
+
+            let output = multiply(num1Value, num2Value);
+            results.innerHTML = output
+           }
+
+           divide_button.onclick = function(e){
+            e.preventDefault();
+            let num1Value = parseFloat(num1.value);
+            let num2Value = parseFloat(num2.value);
+
+            let output = divide(num1Value,num2Value);
+            results.innerHTML = output
+           }
+
+
+           square_button.onclick = function(e){
+            e.preventDefault();
+            let num1Value = parseFloat(num1.value);
+            let num2Value = parseFloat(num2.value);
+
+            let output = square(num1Value,num2Value);
+            results.innerHTML =output
+           }
+
+
+
+
+
+
+        
+
+
+    
+    
+
+    
+        
+
+        
+    </script>
+
+</html>
